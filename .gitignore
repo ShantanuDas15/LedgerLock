@@ -1,0 +1,261 @@
+# =============================================================================
+# LedgerLock .gitignore - FinTech Security Standards
+# =============================================================================
+# This file defines patterns for files that should NEVER be committed
+# to version control. Critical for protecting sensitive data in
+# financial applications.
+# =============================================================================
+
+# ======================== BUILD ARTIFACTS ========================
+# Compiled output directories and files
+target/
+build/
+out/
+bin/
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# ======================== IDE & EDITOR FILES ========================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Eclipse
+.project
+.classpath
+.settings/
+*.launch
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+
+# Other editors
+*.swp
+*.swo
+*~
+*.sublime-*
+.atom/
+
+# ======================== SECRETS & CREDENTIALS ========================
+# CRITICAL: Never commit secrets to version control
+# These patterns protect sensitive data from exposure
+
+# Environment files
+*.env
+.env.*
+!.env.example
+
+# Application secrets
+application-local.properties
+application-local.yml
+application-prod.properties
+application-prod.yml
+application-secret*.properties
+application-secret*.yml
+**/secrets/
+secret.properties
+secrets.yml
+
+# Cryptographic keys and certificates
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.truststore
+
+# Cloud credentials
+credentials.json
+service-account*.json
+*-credentials.json
+*-sa-key.json
+.gcloud/
+.aws/
+.azure/
+
+# API keys and tokens
+api-key*.txt
+token*.txt
+*.token
+
+# ======================== LOGS & TEMPORARY FILES ========================
+logs/
+*.log
+*.log.*
+*.tmp
+*.temp
+*.bak
+*.cache
+.cache/
+*.pid
+*.seed
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*
+
+# ======================== OS-SPECIFIC FILES ========================
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+
+# ======================== DEPENDENCY DIRECTORIES ========================
+# Node.js
+node_modules/
+.npm/
+.pnpm/
+.yarn/
+
+# Bower
+bower_components/
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+venv/
+.venv/
+env/
+
+# ======================== TEST & COVERAGE REPORTS ========================
+# Keep test structure, exclude temporary files
+**/*.dump
+**/*.dumpstream
+coverage/
+.nyc_output/
+*.lcov
+.coverage
+htmlcov/
+
+# JaCoCo
+jacoco.exec
+
+# ======================== DATABASE FILES ========================
+# Local databases should never be committed
+*.db
+*.sqlite
+*.sqlite3
+*.mdf
+*.ldf
+h2-data/
+data/
+derby.log
+
+# ======================== INFRASTRUCTURE & DEPLOYMENT ========================
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+terraform.tfvars
+*.auto.tfvars
+.terraform.lock.hcl
+
+# Kubernetes secrets (should use external secret management)
+*-secrets.yaml
+*-secret.yaml
+
+# Docker
+docker-compose.override.yml
+docker-compose.local.yml
+.docker/
+
+# ======================== BACKUP FILES ========================
+*.backup
+*.bak
+*.old
+*.orig
+*_backup
+*_bak
+
+# ======================== PROFILING & PERFORMANCE ========================
+# JMeter
+*.jtl
+*.jmx.bak
+
+# Gatling
+results/
+# Keep simulation files, exclude results
+target/gatling/
+
+# ======================== SPRING BOOT SPECIFIC ========================
+# Spring Boot DevTools
+.spring-boot-devtools.properties
+
+# Spring Boot native
+.native/
+
+# ======================== MAVEN SPECIFIC ========================
+# Maven settings with credentials
+settings.xml
+!.mvn/wrapper/maven-wrapper.properties
+
+# Maven downloaded dependencies
+.m2/repository/
+
+# ======================== GRADLE SPECIFIC ========================
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# ======================== DOCUMENTATION BUILD ========================
+# Generated documentation
+docs/_build/
+site/
+public/
+dist/
+
+# ======================== MISCELLANEOUS ========================
+# Package files
+*.dmg
+*.iso
+
+# Temporary directories
+tmp/
+temp/
+.tmp/
+
+# Local environment overrides
+local.properties
+local.yml
+local.json
